@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Mountaineering Clubs - Find Climbing Groups Near You</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/discover.css">
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MOUNTAINEERING</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="adventure.html">Adventure</a></li>
+                <li><a href="safety.html">Safety Guidelines</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="discover.html">Discover Clubs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="login.html" class="login-btn">Login</a>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Mountaineering Clubs Near You</h1>
+            <p>Find certified clubs, training camps, and events around the world.</p>
+            <a href="#map-section" class="cta-button" id="find-clubs-btn">Find Clubs Near Me</a>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map-section" class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Find Clubs in Your Area</h2>
+            </div>
+            <div class="map-container">
+                <div class="map-controls">
+                    <h3>Search Location</h3>
+                    <div class="location-input">
+                        <input type="text" id="location-input" placeholder="Enter your city or country">
+                        <button id="location-search"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="location-status" id="location-status">
+                        <p>Click "Find Clubs Near Me" to detect your location or enter your location manually.</p>
+                    </div>
+                    <div class="location-actions">
+                        <button class="cta-button" id="detect-location">
+                            <i class="fas fa-location-arrow"></i> Detect My Location
+                        </button>
+                    </div>
+                </div>
+                <div class="map-view">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clubs Section -->
+    <section class="clubs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mountaineering Clubs</h2>
+            </div>
+            <div class="search-filters">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="club-search" placeholder="Search clubs by name or location...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Clubs</button>
+                    <button class="filter-btn" data-filter="beginner">Beginners</button>
+                    <button class="filter-btn" data-filter="professional">Professional</button>
+                    <button class="filter-btn" data-filter="expedition">Expedition</button>
+                    <button class="filter-btn" data-filter="ice">Ice Climbing</button>
+                    <button class="filter-btn" data-filter="trekking">Trekking</button>
+                </div>
+            </div>
+            <div class="clubs-grid" id="clubs-container">
+                <!-- Club cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Clubs Section -->
+    <section class="featured-clubs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Clubs</h2>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="./images/m1.jpg" alt="Karakuram Mountaineering Club">
+                    </div>
+                    <div class="featured-content">
+                        <div>
+                            <span class="featured-badge">Top Rated</span>
+                            <h3>Karakuram Mountaineering Club</h3>
+                            <p>Based in Skardu, Pakistan, this club specializes in high-altitude expeditions to K2,
+                                Broad Peak, and Gasherbrum peaks.</p>
+                            <div class="club-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Skardu, Pakistan</span>
+                                <span><i class="fas fa-users"></i> 150+ Members</span>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-btn" data-club="karakuram">View Club Profile</a>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="./images/m2.jpg" alt="Himalayan Alpine Club">
+                    </div>
+                    <div class="featured-content">
+                        <div>
+                            <span class="featured-badge">Certified IFMGA</span>
+                            <h3>Himalayan Alpine Club</h3>
+                            <p>International expeditions and training programs with IFMGA certified guides. Specializing
+                                in Everest and Annapurna regions.</p>
+                            <div class="club-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</span>
+                                <span><i class="fas fa-users"></i> 200+ Members</span>
+                            </div>
+                        </div>
+                        <a href="#" class="contact-btn" data-club="himalayan">View Club Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Club Activities & Events</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./images/Forest Trail.jpeg" alt="Training Camp">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">View Photo</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/Gear in Action1.jpeg" alt="Ice Climbing">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">View Photo</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/Life in Basecamp.jpeg" alt="Basecamp">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">View Photo</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/Gear in Action4.jpeg" alt="Team Climb">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">View Photo</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/mountainpeaks.jpeg" alt="Rock Climbing">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">View Photo</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/Gear in Action8.jpeg" alt="Expedition">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">View Photo</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/Gear in Action3.jpeg" alt="Glacier Training">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">View Photo</div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/Safety Tips.jpeg" alt="Summit Celebration">
+                    <div class="gallery-overlay">
+                        <div class="gallery-text">View Photo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Form Section -->
+    <section class="join-form">
+        <div class="container">
+            <div class="section-title">
+                <h2>Join a Mountaineering Club</h2>
+            </div>
+            <div class="form-container">
+                <form id="join-club-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Country / City</label>
+                        <input type="text" id="location" class="form-input" placeholder="Enter your location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Experience Level</label>
+                        <select id="experience" class="form-select" required>
+                            <option value="">Select your experience level</option>
+                            <option value="beginner">Beginner (No prior experience)</option>
+                            <option value="intermediate">Intermediate (Some climbing experience)</option>
+                            <option value="advanced">Advanced (Regular climber)</option>
+                            <option value="expert">Expert (Professional level)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Primary Interest</label>
+                        <select id="interest" class="form-select" required>
+                            <option value="">Select your primary interest</option>
+                            <option value="mountaineering">Mountaineering</option>
+                            <option value="rock-climbing">Rock Climbing</option>
+                            <option value="ice-climbing">Ice Climbing</option>
+                            <option value="trekking">Trekking</option>
+                            <option value="all">All of the above</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Join a Club</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section footer-about">
+                <h3>About Us</h3>
+                <p>We create modern, responsive websites with user experience at the forefront. Our solutions are
+                    designed to help your business thrive in the digital world.</p>
+                <div class="social-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                    <li><a href="adventure.html"><i class="fas fa-chevron-right"></i> Adventure</a></li>
+                    <li><a href="safety.html"><i class="fas fa-chevron-right"></i> Safety</a></li>
+                    <li><a href="explore.html"><i class="fas fa-chevron-right"></i> Explore</a></li>
+                    <li><a href="discover.html"><i class="fas fa-chevron-right"></i> Discover</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@example.com</p>
+                <p><i class="fas fa-clock"></i> Mon - Fri: 9AM - 6PM</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="color: var(--c-14); margin-bottom: 15px;">Subscribe to our newsletter for updates.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email" class="newsletter-input">
+                    <button class="newsletter-btn" aria-label="Subscribe to newsletter">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Modern Website. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Club Modal -->
+    <div class="modal" id="club-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Club Details</h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="" class="club-modal-image">
+                <div class="club-modal-meta">
+                    <span id="modal-location"></span>
+                    <span id="modal-members"></span>
+                    <span id="modal-specialty"></span>
+                </div>
+                <div id="modal-description"></div>
+                <h4>Club Gallery</h4>
+                <div class="club-modal-gallery" id="modal-gallery">
+                    <!-- Gallery items will be populated by JavaScript -->
+                </div>
+                <h4>Contact Information</h4>
+                <div id="modal-contact"></div>
+                <h4>Join This Club</h4>
+                <form id="modal-join-form">
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your email address" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Request to Join</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/discover.js"></script>
+
+    <script>
+        // ===== NEWSLETTER FORM =====
+        document.querySelector('.newsletter-btn').addEventListener('click', function () {
+            const email = document.querySelector('.newsletter-input').value.trim();
+
+            if (!email) {
+                alert('Please enter your email address.');
+                return;
+            }
+
+            // In a real implementation, you would send this to your server
+            alert(`Thank you for subscribing with: ${email}`);
+            document.querySelector('.newsletter-input').value = '';
+        });
+
+        // Allow submitting with Enter key
+        document.querySelector('.newsletter-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                document.querySelector('.newsletter-btn').click();
+            }
+        });
+    </script>
+</body>
+
+</html>

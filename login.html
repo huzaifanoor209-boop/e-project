@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/login.css">
+
+
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">MOUNTAINEERING</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="adventure.html">Adventure</a></li>
+                <li><a href="safety.html">Safety Guidelines</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="discover.html">Discover Clubs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="login.html" class="login-btn-1">Login</a>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Main Login Panel -->
+    <main class="login-main">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <h1>Welcome Back, Explorer</h1>
+                    <p>Log in to continue your journey.</p>
+                </div>
+
+                <form class="login-form" id="loginForm">
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" required>
+                        <label for="password">Password</label>
+                        <span class="password-toggle" id="passwordToggle">👁️</span>
+                    </div>
+
+                    <button type="submit" class="login-btn" id="loginButton">
+                        Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Popup Modal -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-modal">
+            <div class="popup-icon" id="popupIcon">✅</div>
+            <h3 id="popupTitle">Login Successful</h3>
+            <p id="popupMessage">Welcome back to Mountaineer!</p>
+            <button class="popup-close-btn" id="popupClose">Continue</button>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section footer-about">
+                <h3>About Us</h3>
+                <p>We create modern, responsive websites with user experience at the forefront. Our solutions are
+                    designed to help your business thrive in the digital world.</p>
+                <div class="social-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                    <li><a href="adventure.html"><i class="fas fa-chevron-right"></i> Adventure</a></li>
+                    <li><a href="safety.html"><i class="fas fa-chevron-right"></i> Safety</a></li>
+                    <li><a href="explore.html"><i class="fas fa-chevron-right"></i> Explore</a></li>
+                    <li><a href="discover.html"><i class="fas fa-chevron-right"></i> Discover</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@example.com</p>
+                <p><i class="fas fa-clock"></i> Mon - Fri: 9AM - 6PM</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="color: var(--c-14); margin-bottom: 15px;">Subscribe to our newsletter for updates.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email" class="newsletter-input">
+                    <button class="newsletter-btn" aria-label="Subscribe to newsletter">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Modern Website. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/login.js"> </script>
+    <script>
+        // ===== NEWSLETTER FORM =====
+        document.querySelector('.newsletter-btn').addEventListener('click', function () {
+            const email = document.querySelector('.newsletter-input').value.trim();
+
+            if (!email) {
+                alert('Please enter your email address.');
+                return;
+            }
+
+            // In a real implementation, you would send this to your server
+            alert(`Thank you for subscribing with: ${email}`);
+            document.querySelector('.newsletter-input').value = '';
+        });
+
+        // Allow submitting with Enter key
+        document.querySelector('.newsletter-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                document.querySelector('.newsletter-btn').click();
+            }
+        });
+    </script>
+
+</body>
+
+
+</html>

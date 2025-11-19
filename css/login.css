@@ -1,0 +1,786 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+    --matte-black: #1C1C1C;
+    --c-1: #000000;
+    --c-2: #0A0A0A;
+    --c-3: #141414;
+    --c-4: #1E1E1E;
+    --c-5: #282828;
+    --c-6: #323232;
+    --c-7: #3C3C3C;
+    --c-8: #464646;
+    --c-9: #505050;
+    --c-10: #5A5A5A;
+    --c-11: #646464;
+    --c-12: #7A7A7A;
+    --c-13: #919191;
+    --c-14: #A8A8A8;
+    --c-15: #C0C0C0;
+    --c-16: #ffffff;
+    --c-17: #141111;
+}
+
+/* ===== RESET / BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background: var(--c-2);
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ===== LAYOUT ===== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+}
+
+.logo {
+    letter-spacing: 1px;
+    font-size: 2.1rem;
+    font-weight: 990;
+    color: var(--white);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: transform 0.3s ease;
+    font-size: 16px;
+}
+
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    transform: scale(1.1);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.login-btn-1 {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    padding: 4px 19px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.login-btn-1:hover {
+    background: #fff;
+    color: #0A0A0A;
+}
+
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* CSS Variables - Color Palette */
+:root {
+    --dark-gray: #282828;
+    --medium-gray: #898989;
+    --very-light-gray: #F8F8F8;
+    --light-gray: #E8E8E8;
+    --c-1: #000000;
+    --c-2: #0A0A0A;
+    --c-3: #141414;
+    --c-4: #1E1E1E;
+    --success-color: #4CAF50;
+    --error-color: #f44336;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background: linear-gradient(var(--c-2), var(--dark-gray));
+    color: var(--very-light-gray);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Header/Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+}
+
+.navbar.scrolled {
+    background-color: rgba(40, 40, 40, 0.95);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    letter-spacing: 1px;
+    font-size: 2.1rem;
+    font-weight: 990;
+    color: var(--very-light-gray);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: var(--very-light-gray);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: transform 0.3s ease;
+    font-size: 16px;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: var(--very-light-gray);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.login-btn {
+    color: var(--very-light-gray);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid var(--very-light-gray);
+    padding: 4px 19px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: var(--very-light-gray);
+    color: var(--dark-gray);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--very-light-gray);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Login Section */
+.login-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 2rem 2rem;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 40px 35px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+    transition: all 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.login-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--very-light-gray);
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #aaaaaa;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Login Form */
+.login-form {
+    margin-bottom: 0;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    background: var(--c-3);
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    color: var(--very-light-gray);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border: 1px solid #4e4e4e;
+    background: #181818;
+}
+
+.input-group label {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label {
+    top: 0;
+    font-size: 12px;
+    background: var(--c-3);
+    padding: 0 8px;
+    color: var(--light-gray);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.password-toggle:hover {
+    opacity: 1;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--c-1);
+    color: var(--very-light-gray);
+    border: none;
+    border-radius: 12px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.login-btn:hover:not(:disabled) {
+    background: #2b2b2b;
+    transform: translateY(-2px);
+    color: var(--c-16);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+.login-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Error Messages */
+.error-message {
+    color: #ff6b6b;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Loading State */
+.login-btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.login-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid var(--very-light-gray);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Popup Modal */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.popup-modal {
+    background: rgba(40, 40, 40, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.popup-overlay.active .popup-modal {
+    transform: scale(1);
+}
+
+.popup-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.popup-modal h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--very-light-gray);
+}
+
+.popup-modal p {
+    color: #aaaaaa;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.popup-close-btn {
+    background: var(--medium-gray);
+    color: var(--very-light-gray);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup-close-btn:hover {
+    background: var(--light-gray);
+    color: var(--dark-gray);
+    transform: translateY(-2px);
+}
+
+/* Success State */
+.popup-success .popup-icon {
+    color: var(--success-color);
+}
+
+.popup-error .popup-icon {
+    color: var(--error-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--dark-gray);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease;
+        z-index: 1001;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .login-card {
+        padding: 30px 25px;
+        margin: 0 10px;
+    }
+
+    .login-header h1 {
+        font-size: 28px;
+    }
+
+    .popup-modal {
+        padding: 30px 25px;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-main {
+        padding: 80px 1rem 1rem;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .login-header h1 {
+        font-size: 24px;
+    }
+
+    .popup-modal {
+        padding: 25px 20px;
+    }
+
+    .popup-modal h3 {
+        font-size: 20px;
+    }
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--c-3);
+    color: var(--c-14);
+    padding: 60px 0 30px;
+    border-top: 1px solid var(--c-6);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 3px;
+    background: var(--c-15);
+    border-radius: 2px;
+}
+
+.footer-about p {
+    margin-bottom: 20px;
+    color: var(--c-14);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: var(--c-14);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: var(--c-15);
+}
+
+.footer-links a i {
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: var(--c-14);
+}
+
+.footer-contact i {
+    margin-right: 12px;
+    color: var(--c-15);
+    width: 20px;
+    text-align: center;
+}
+
+.social-section {
+    margin-top: 25px;
+}
+
+.social-section h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--c-6);
+    border-radius: 50%;
+    color: #f1f5f9;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid var(--c-8);
+}
+
+.social-icon:hover {
+    background: var(--c-8);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding: 25px 20px 0;
+    border-top: 1px solid var(--c-6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--c-14);
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+    color: var(--c-14);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--c-15);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    background: var(--c-5);
+    color: #f1f5f9;
+    font-size: 0.9rem;
+    border: 1px solid var(--c-6);
+}
+
+.newsletter-input::placeholder {
+    color: var(--c-12);
+}
+
+.newsletter-btn {
+    padding: 10px 15px;
+    background: var(--c-8);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--c-10);
+}
+
+.newsletter-btn:hover {
+    background: var(--c-9);
+}

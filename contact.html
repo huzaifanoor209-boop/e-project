@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support - Pakistan Mountaineering</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MOUNTAINEERING</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="adventure.html">Adventure</a></li>
+                <li><a href="safety.html">Safety Guidelines</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="discover.html">Discover Clubs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="login.html" class="login-btn">Login</a>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact & Support</h1>
+            <p>Questions, feedback, or help — our team is here for you.</p>
+            <a href="#contact-form" class="cta-button">Send Us a Message</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+92 333 1234567</p>
+                    <p>Available 9AM-7PM</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>support@mountain.pk</p>
+                    <p>Quick response guaranteed</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Office</h3>
+                    <p>Islamabad, Pakistan</p>
+                    <p>Visit us anytime</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Hours</h3>
+                    <p>Mon–Sat: 9AM–7PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="contact-form">
+        <div class="container">
+            <div class="section-title">
+                <h2>Send Us a Message</h2>
+            </div>
+            <div class="form-container">
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" class="form-input" placeholder="Enter your full name" required>
+                            <div class="error-message" id="name-error">Please enter your name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                            <div class="error-message" id="email-error">Please enter a valid email</div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-input" placeholder="+92 333 1234567">
+                            <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Message Category *</label>
+                            <select id="category" class="form-select" required>
+                                <option value="">Select a category</option>
+                                <option value="general">General Question</option>
+                                <option value="safety">Safety Problem Report</option>
+                                <option value="feedback">Feedback / Suggestions</option>
+                                <option value="registration">Club Registration Help</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message" id="category-error">Please select a category</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" class="form-textarea" placeholder="Tell us how we can help you..."
+                            required></textarea>
+                        <div class="error-message" id="message-error">Please enter your message</div>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        <span id="btn-text">Send Message</span>
+                        <div class="loading-spinner" id="loading-spinner"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212645.6417082704!2d72.93302402941802!3d33.61603730223784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfd07891722f%3A0x6059515c3bdb02b6!2sIslamabad%2C%20Islamabad%20Capital%20Territory%2C%20Pakistan!5e0!3m2!1sen!2s!4v1684323456789!5m2!1sen!2s"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does it take to get a reply?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically respond within 24-48 hours. For urgent safety issues, we prioritize those
+                            messages and respond within 12 hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I report safety issues through this form?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, please use the "Safety Problem Report" category when submitting your message. We take
+                            all safety concerns seriously and will address them promptly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you help with student projects or research?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We're happy to support educational initiatives. Please provide details about your
+                            project in your message, and we'll do our best to assist with information or guidance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What information should I include in my message?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Please include your full name, contact information, and a detailed description of your
+                            question or concern. The more specific you are, the better we can assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section footer-about">
+                <h3>About Us</h3>
+                <p>We create modern, responsive websites with user experience at the forefront. Our solutions are
+                    designed to help your business thrive in the digital world.</p>
+                <div class="social-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                    <li><a href="adventure.html"><i class="fas fa-chevron-right"></i> Adventure</a></li>
+                    <li><a href="safety.html"><i class="fas fa-chevron-right"></i> Safety</a></li>
+                    <li><a href="explore.html"><i class="fas fa-chevron-right"></i> Explore</a></li>
+                    <li><a href="discover.html"><i class="fas fa-chevron-right"></i> Discover</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@example.com</p>
+                <p><i class="fas fa-clock"></i> Mon - Fri: 9AM - 6PM</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="color: var(--c-14); margin-bottom: 15px;">Subscribe to our newsletter for updates.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email" class="newsletter-input">
+                    <button class="newsletter-btn" aria-label="Subscribe to newsletter">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Modern Website. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Message Sent Successfully!</h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <p>Thank you for contacting us! Your message has been sent successfully.</p>
+                <p>We'll get back to you as soon as possible.</p>
+                <button class="cta-button" id="close-modal-btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations for cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe contact cards
+        document.querySelectorAll('.contact-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Form Validation and Submission
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const successModal = document.getElementById('success-modal');
+        const modalClose = document.getElementById('modal-close');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        // Validate email format
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Validate phone format (Pakistan)
+        function isValidPhone(phone) {
+            if (!phone) return true; // Phone is optional
+            const phoneRegex = /^(\+92|0)[0-9]{10}$/;
+            return phoneRegex.test(phone.replace(/\s/g, ''));
+        }
+
+        // Clear error states
+        function clearErrors() {
+            document.querySelectorAll('.error').forEach(el => {
+                el.classList.remove('error');
+            });
+            document.querySelectorAll('.error-message').forEach(el => {
+                el.style.display = 'none';
+            });
+        }
+
+        // Show error for a specific field
+        function showError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const errorElement = document.getElementById(`${fieldId}-error`);
+
+            field.classList.add('error');
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+
+        // Show success modal
+        function showSuccessModal() {
+            successModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close success modal
+        function closeSuccessModal() {
+            successModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Form submission
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const category = document.getElementById('category').value;
+            const message = document.getElementById('message').value.trim();
+
+            // Clear previous errors
+            clearErrors();
+
+            // Validate form
+            let isValid = true;
+
+            if (!name) {
+                showError('name', 'Please enter your name');
+                isValid = false;
+            }
+
+            if (!email) {
+                showError('email', 'Please enter your email');
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                showError('email', 'Please enter a valid email address');
+                isValid = false;
+            }
+
+            if (phone && !isValidPhone(phone)) {
+                showError('phone', 'Please enter a valid Pakistan phone number');
+                isValid = false;
+            }
+
+            if (!category) {
+                showError('category', 'Please select a category');
+                isValid = false;
+            }
+
+            if (!message) {
+                showError('message', 'Please enter your message');
+                isValid = false;
+            }
+
+            if (!isValid) {
+                return;
+            }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending...';
+            loadingSpinner.style.display = 'block';
+
+            try {
+                // Simulate form submission (replace with actual submission logic)
+                await new Promise(resolve => setTimeout(resolve, 1500));
+
+                // Show success modal
+                showSuccessModal();
+                contactForm.reset();
+
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('❌ Error sending message. Please try again later.');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send Message';
+                loadingSpinner.style.display = 'none';
+            }
+        });
+
+        // Real-time validation
+        document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(field => {
+            field.addEventListener('blur', () => {
+                const fieldId = field.id;
+                const value = field.value.trim();
+
+                // Clear any existing error for this field
+                field.classList.remove('error');
+                document.getElementById(`${fieldId}-error`).style.display = 'none';
+
+                // Validate based on field type
+                if (fieldId === 'email' && value && !isValidEmail(value)) {
+                    showError(fieldId, 'Please enter a valid email address');
+                } else if (fieldId === 'phone' && value && !isValidPhone(value)) {
+                    showError(fieldId, 'Please enter a valid Pakistan phone number');
+                }
+            });
+        });
+
+        // Modal event listeners
+        modalClose.addEventListener('click', closeSuccessModal);
+        closeModalBtn.addEventListener('click', closeSuccessModal);
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                closeSuccessModal();
+            }
+        });
+
+        // Footer newsletter
+        const footerNewsletter = document.querySelector('.newsletter-form');
+        footerNewsletter.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Subscribed! You will receive updates and safety alerts.');
+            footerNewsletter.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+
+
+        // ===== NEWSLETTER FORM =====
+        document.querySelector('.newsletter-btn').addEventListener('click', function () {
+            const email = document.querySelector('.newsletter-input').value.trim();
+
+            if (!email) {
+                alert('Please enter your email address.');
+                return;
+            }
+
+            // In a real implementation, you would send this to your server
+            alert(`Thank you for subscribing with: ${email}`);
+            document.querySelector('.newsletter-input').value = '';
+        });
+
+        // Allow submitting with Enter key
+        document.querySelector('.newsletter-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                document.querySelector('.newsletter-btn').click();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

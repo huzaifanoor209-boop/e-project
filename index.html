@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountaineering </title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+<body>
+
+    <section class="hero" id="hero">
+        <header>
+            <nav class="navbar">
+                <div class="logo">MOUNTAINEERING</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="adventure.html">Adventure</a></li>
+                    <li><a href="safety.html">Safety Guidelines</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="discover.html">Discover Clubs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <a href="login.html" class="login-btn">Login</a>
+                <button class="hamburger" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Hero Text -->
+        <main id="main-content">
+            <div class="hero-content">
+                <h1 class="banner-heading">
+                    <span class="word1" id="hero-word1">Conquer Heights.</span><br>
+                    <span class="word2" id="hero-word2">Discover Yourself.</span>
+                </h1>
+                <p id="hero-description">Mountaineering is not just about climbing peaks — it's about discovering your
+                    inner strength and
+                    pushing
+                    beyond limits. Every ascent tells a story of courage, endurance, and passion. Join a community of
+                    explorers who live for the thrill of the climb. From gear tips to global routes, we guide your
+                    journey
+                    to new heights — where adventure and determination meet the sky.</p>
+            </div>
+        </main>
+
+        <!-- Weather Box -->
+        <div class="weather-box" id="weather-box">
+            <div class="weather-top">
+                <span id="location">--</span>
+                <span id="date">--/--/----</span>
+            </div>
+            <div class="temp" id="temp">--°C</div>
+            <img id="icon" class="icon" src="" alt="Weather condition icon">
+            <div class="condition" id="condition">--</div>
+            <div class="time" id="time">--:--</div>
+            <div class="day" id="day">--</div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel-frame">
+            <button class="carousel-btn" id="prev" aria-label="Previous carousel items">&#10094;</button>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <div class="carousel-item" data-mountain="K2" data-heading1="K2" data-heading2="The Savage Mountain"
+                        data-description="K2, at 8,611 meters, is the world’s second-highest peak and one of the toughest mountains ever climbed. Its steep ice walls, unpredictable storms, and technical routes push climbers to the limits of endurance and courage. Surviving K2 is considered one of mountaineering’s greatest achievements.">
+                        <img src="images/m1.jpg" alt="K2">
+                        <h3>K2</h3>
+                    </div>
+
+                    <div class="carousel-item" data-mountain="Nanga Parbat" data-heading1="Nanga Parbat"
+                        data-heading2="The Killer Mountain"
+                        data-description="Nanga Parbat stands at 8,126 meters and is known for its deadly beauty. Its dramatic Rupal Face is the tallest mountain wall in the world. Treacherous snowfields, avalanches, and extreme altitude make this climb one of the most dangerous on Earth.">
+                        <img src="images/m2.jpg" alt="Nanga Parbat">
+                        <h3>NANGA PARBAT</h3>
+                    </div>
+
+                    <div class="carousel-item" data-mountain="Gasherbrum I" data-heading1="Gasherbrum I"
+                        data-heading2="Hidden Peak"
+                        data-description="At 8,080 meters, Gasherbrum I is admired for its remote elegance. The climb involves navigating deep crevasses, towering ice seracs, and freezing winds that test a climber’s patience and precision. Its quiet isolation makes it both beautiful and challenging.">
+                        <img src="images/m3.jpg" alt="Gasherbrum I">
+                        <h3>GASHERBRUM I</h3>
+                    </div>
+
+                    <div class="carousel-item" data-mountain="Broad Peak" data-heading1="Broad Peak"
+                        data-heading2="The Wide Mountain"
+                        data-description="Broad Peak rises to 8,051 meters and stretches across a long summit ridge. Climbers face high-altitude exhaustion, sharp winds, and a never-ending push to reach the true summit. It demands discipline and determination.">
+                        <img src="images/m5.jpg" alt="Broad Peak">
+                        <h3>BROAD PEAK</h3>
+                    </div>
+
+                    <div class="carousel-item" data-mountain="Gasherbrum II" data-heading1="Gasherbrum II"
+                        data-heading2="The Shining Mountain"
+                        data-description="Gasherbrum II, at 8,035 meters, is considered one of the more achievable 8000ers, but it still challenges climbers with severe cold, hidden crevasses, and rapidly changing weather. Its gentle slopes turn deadly in storms, making experience essential.">
+                        <img src="images/m3.jpg" alt="Gasherbrum II">
+                        <h3>GASHERBRUM II</h3>
+                    </div>
+
+                    <div class="carousel-item" data-mountain="Masherbrum" data-heading1="Masherbrum"
+                        data-heading2="The Queen of the Karakoram"
+                        data-description="Masherbrum stands at 7,821 meters and is known for its sharp pyramid shape. The climb includes rock, ice, and mixed terrains that require advanced technical skills. Its remote location and harsh conditions keep it one of Pakistan’s most respected peaks.">
+                        <img src="images/m6.jpg" alt="Masherbrum">
+                        <h3>MASHERBRUM</h3>
+                    </div>
+
+                    <div class="carousel-item" data-mountain="Rakaposhi" data-heading1="Rakaposhi"
+                        data-heading2="The Shining Wall"
+                        data-description="Rakaposhi, at 7,788 meters, features one of the greatest uninterrupted vertical rises in the world. The climb tests mountaineers with heavy snow, unstable slopes, and long, demanding routes. Its beauty is matched only by its difficulty.">
+                        <img src="images/m7.jpg" alt="Rakaposhi">
+                        <h3>RAKAPOSHI</h3>
+                    </div>
+
+                    <div class="carousel-item" data-mountain="Tirich Mir" data-heading1="Tirich Mir"
+                        data-heading2="The Hindu Kush Giant"
+                        data-description="Tirich Mir rises to 7,708 meters and dominates the Hindu Kush range with its towering presence. Climbers must navigate rock cliffs, ice fields, and unpredictable storms. Its remote valleys and rugged beauty make it a unique adventure.">
+                        <img src="images/m8.jpg" alt="Tirich Mir">
+                        <h3>TIRICH MIR</h3>
+                    </div>
+
+                    <div class="carousel-item" data-mountain="Distaghil Sar" data-heading1="Distaghil Sar"
+                        data-heading2="The Massive Mountain"
+                        data-description="At 7,885 meters, Distaghil Sar is the highest peak in the Hispar Muztagh. Climbers face heavy snow, knife-edge ridges, and fierce winds. The ascent demands teamwork, stamina, and technical skill to navigate its icy slopes.">
+                        <img src="images/m1.jpg" alt="Distaghil Sar">
+                        <h3>DISTAGHIL SAR</h3>
+                    </div>
+
+                    <div class="carousel-item" data-mountain="Batura Sar" data-heading1="Batura Sar"
+                        data-heading2="The Batura Wall"
+                        data-description="Batura Sar reaches 7,795 meters and is part of the striking Batura Wall. Its long glacier approach, sharp ridges, and extreme cold challenge even seasoned climbers. The climb rewards mountaineers with breathtaking views of untouched valleys.">
+                        <img src="images/m2.jpg" alt="Batura Sar">
+                        <h3>BATURA SAR</h3>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn" id="next" aria-label="Next carousel items">&#10095;</button>
+        </div>
+    </section>
+
+
+
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 class="custom-heading">
+                    <span class="word1">What is </span>
+                    <span class="word2">Mountaineering?</span>
+                </h2>
+
+                <p>Mountaineering is a thrilling outdoor adventure that requires courage, skill and preparation, because
+                    mountains are unpredictable and nature always has challenges waiting. Climbers train to build
+                    strength, learn navigation, and understand how to move on snow, ice, rock and steep trails. Safety
+                    gear such as ropes, crampons, helmets and harnesses protect them from dangerous terrain and harsh
+                    weather. Mountaineering is not only about reaching the top; it is also about respecting nature,
+                    teamwork, responsibility, and learning how powerful the environment can be. Every expedition teaches
+                    patience, discipline, leadership, and survival skills. Whether climbing small peaks or world-famous
+                    mountains, mountaineering gives people unforgettable views, memories, and achievements.</p>
+                <div>
+                    <a href="about.html" class="about-read-more"><b>Read More</b></a>
+                </div>
+            </div>
+
+            <div class="about-images">
+                <div class="image-box front">
+                    <img src="images/m9.jpg" alt="Front mountain image" />
+                </div>
+                <div class="image-box back">
+                    <img src="images/m10.jpg" alt="Back mountain image" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HIGHLIGHTS SECTION ===== -->
+    <section class="highlights-section" id="highlights">
+        <h2 class="highlights-title">Highlights</h2>
+        <div class="highlights-cards">
+            <div class="highlight-card">
+                <div class="highlight-overlay"></div>
+                <div class="highlight-content">
+                    <h3>Mountain Peaks</h3>
+                    <p>Explore the world's tallest peaks and uncover the thrill of adventure high above the clouds.</p>
+                    <a href="explore.html#expeditions" class="highlight-read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-overlay"></div>
+                <div class="highlight-content">
+                    <h3>Climbing Gear</h3>
+                    <p>Know about the latest climbing gear, ropes, and techniques for a safe and exciting expedition.
+                    </p>
+                    <a href="adventure.html#gear" class="highlight-read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-overlay"></div>
+                <div class="highlight-content">
+                    <h3>Safety Tips</h3>
+                    <p>Learn the essential safety practices every mountaineer must follow before hitting the trail.</p>
+                    <a href="safety.html" class="highlight-read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-overlay"></div>
+                <div class="highlight-content">
+                    <h3>Famous Climbers</h3>
+                    <p>Get inspired by real-life stories of climbers who conquered impossible heights with courage.</p>
+                    <a href="about.html#famous-climbers" class="highlight-read-more">Read More</a>
+                </div>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-overlay"></div>
+                <div class="highlight-content">
+                    <h3>Global Routes</h3>
+                    <p>Discover breathtaking routes across continents that challenge even the most skilled climbers.</p>
+                    <a href="discover.html" class="highlight-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ===== RECORDS & SUCCESS STORIES SECTION ===== -->
+    <div class="carousel-main-container">
+        <!-- Header section from image -->
+        <div class="carousel-header-section">
+            <h2>RECORDS & SUCCESS STORIES <br> PREVIEWS</h2>
+            <p>Mountaineering is filled with fearless climbers, legendary records, and inspiring victories from around
+                the world. These stories prove that courage, discipline, and passion can conquer even the highest peaks
+                on Earth.</p>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="carousel-container-1">
+            <!-- Carousel Track -->
+            <div id="carousel-track" class="carousel-track">
+                <!-- Card 1 -->
+                <div class="carousel-card">
+                    <div class="carousel-card-image">
+                        <img src="images/Sirbaz Khan.jpeg"
+                            alt="Sirbaz Khan - First Pakistani to Summit All 14 Eight-Thousanders">
+                    </div>
+                    <div class="carousel-card-content">
+                        <h3>Sirbaz Khan – First Pakistani to Summit All 14 Eight-Thousanders</h3>
+                        <p>Sirbaz Khan became the first Pakistani climber to reach all 14 peaks above 8,000 m without
+                            supplemental oxygen, marking a milestone in Pakistan's mountaineering history.</p>
+                        <button class="rs-read-more-btn">READ MORE</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="carousel-card">
+                    <div class="carousel-card-image">
+                        <img src="images/Shehroze Kashif.png"
+                            alt="Shehroze Kashif - Youngest Pakistani to Summit K2 & Everest">
+                    </div>
+                    <div class="carousel-card-content">
+                        <h3>Shehroze Kashif – Youngest Pakistani to Summit K2 & Everest</h3>
+                        <p>At just 19 years old, Shehroze Kashif made history by becoming the youngest Pakistani to
+                            summit both K2 and Everest, showcasing remarkable skill and determination.</p>
+                        <button class="rs-read-more-btn">READ MORE</button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="carousel-card">
+                    <div class="carousel-card-image">
+                        <img src="images/Muhammad Ali Sadpara.jpg"
+                            alt="Muhammad Ali Sadpara - First Winter Ascent of Nanga Parbat">
+                    </div>
+                    <div class="carousel-card-content">
+                        <h3>Muhammad Ali Sadpara – First Winter Ascent of Nanga Parbat</h3>
+                        <p>Muhammad Ali Sadpara made history by becoming the first climber to successfully reach the
+                            summit of Nanga Parbat in winter, showcasing extraordinary skill and determination.</p>
+                        <button class="rs-read-more-btn">READ MORE</button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="carousel-card">
+                    <div class="carousel-card-image">
+                        <img src="images/saimabaig.jpeg"
+                            alt="Samina Baig - First Pakistani Woman to Climb K2 & Seven Summits">
+                    </div>
+                    <div class="carousel-card-content">
+                        <h3>Samina Baig – First Pakistani Woman to Climb K2 & Seven Summits</h3>
+                        <p>Samina Baig became the first Pakistani woman to climb K2 (July 2022) and also completed the
+                            Seven Summits challenge by 2014, becoming a trailblazer for female mountaineers.</p>
+                        <button class="rs-read-more-btn">READ MORE</button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="carousel-card">
+                    <div class="carousel-card-image">
+                        <img src="images/Ashraf_Aman.JPG" alt="Ashraf Aman - First Pakistani to Summit K2">
+                    </div>
+                    <div class="carousel-card-content">
+                        <h3>Ashraf Aman – First Pakistani to Summit K2</h3>
+                        <p>Ashraf Aman made history by becoming the first Pakistani climber to successfully reach the
+                            summit of K2, showcasing exceptional skill and determination.</p>
+                        <button class="rs-read-more-btn">READ MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left Arrow -->
+            <button id="carousel-prev-btn" class="carousel-arrow" aria-label="Previous carousel card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </button>
+
+            <!-- Right Arrow -->
+            <button id="carousel-next-btn" class="carousel-arrow" aria-label="Next carousel card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <section class="mountaineering-section">
+        <div class="top-section">
+            <div class="left-content">
+                <h2>Explore Mountaineering Clubs Near You</h2>
+                <p class="description">
+                    Discover mountaineering clubs, training centers, and iconic climbing destinations.
+                    Connect with fellow climbers, join expeditions, and find the gear and guidance you need
+                    for your next adventure.
+                </p>
+            </div>
+            <div class="right-content">
+                <ul class="features-list">
+                    <li>Locate registered mountaineering clubs</li>
+                    <li>Join local climbs and expeditions</li>
+                    <li>Find certified guides and training centers</li>
+                    <li>Discover climbing routes and difficulty levels</li>
+                    <li>Connect with fellow mountaineers</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="location-list-container">
+                <div class="location-list">
+                    <h3>Featured Mountaineering Locations:</h3>
+                    <ul id="location-list">
+                        <li data-location="k2" data-coords="35.8806,76.5150">K2 Base Camp, Pakistan</li>
+                        <li data-location="skardu" data-coords="35.2971,75.6333">Skardu, Pakistan</li>
+                        <li data-location="hunza" data-coords="36.3167,74.6500">Hunza Valley, Pakistan</li>
+                        <li data-location="nanga" data-coords="35.2375,74.5892">Nanga Parbat Base Camp</li>
+                        <li data-location="fairy" data-coords="35.4214,74.5989">Fairy Meadows, Pakistan</li>
+                        <li data-location="abbottabad" data-coords="34.1463,73.2117">Abbottabad, Pakistan</li>
+                        <li data-location="gilgit" data-coords="35.9208,74.3144">Gilgit, Pakistan</li>
+                    </ul>
+                </div>
+
+                <div class="map-controls">
+                    <button class="map-btn" id="view-all">View All Locations</button>
+                    <button class="map-btn" id="view-k2">Focus on K2</button>
+                    <button class="map-btn" id="view-hunza">Focus on Hunza</button>
+                </div>
+
+                <div class="location-info" id="location-info">
+                    <!-- Location details will be populated by JavaScript -->
+                </div>
+
+                <div class="map-instructions">
+                    <strong>Tip:</strong> Click on any location in the list to see details and view it on the map.
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe class="map-frame" id="mountaineering-map"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2716847.567489832!2d74.5!3d35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1690000000000!5m2!1sen!2s"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Mountaineering locations map">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <div class="gallery-container">
+        <h1 class="gallery-title">Gallery Carousel</h1>
+
+        <div class="gallery-carousel-wrapper">
+            <button class="gallery-carousel-nav prev" aria-label="Previous gallery image">
+                <svg viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                </svg>
+            </button>
+
+            <div class="gallery-carousel">
+                <div class="gallery-card">
+                    <div class="gallery-card-image"><img src="images/Mountain View.jpeg" alt="">
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">Mountain View</h3>
+                        <p class="gallery-card-description">Beautiful mountain scenery with stunning panoramic views.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-card-image"><img src="images/Forest Trail.jpeg" alt=""></div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">Forest Trail</h3>
+                        <p class="gallery-card-description">Peaceful forest pathway surrounded by nature.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-card-image">
+                        <img src="images/Ocean Sunset.jpeg" alt="">
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">Ocean Sunset</h3>
+                        <p class="gallery-card-description">Breathtaking sunset over the calm ocean waters.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-card-image">
+                        <img src="images/Lake Serenity.jpeg" alt="">
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">Lake Serenity</h3>
+                        <p class="gallery-card-description">Crystal clear lake reflecting the mountains.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-card-image">
+                        <img src="images/Valley Mist.jpeg" alt="">
+                    </div>
+                    <div class="gallery-card-content">
+                        <h3 class="gallery-card-title">Valley Mist</h3>
+                        <p class="gallery-card-description">Morning mist rising through the valley.</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <button class="gallery-carousel-nav next" aria-label="Next gallery image">
+                <svg viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="gallery-carousel-indicators">
+            <div class="indicator active" data-index="0"></div>
+            <div class="indicator" data-index="1"></div>
+            <div class="indicator" data-index="2"></div>
+            <div class="indicator" data-index="3"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section footer-about">
+                <h3>About Us</h3>
+                <p>We create modern, responsive websites with user experience at the forefront. Our solutions are
+                    designed to help your business thrive in the digital world.</p>
+                <div class="social-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                    <li><a href="adventure.html"><i class="fas fa-chevron-right"></i> Adventure</a></li>
+                    <li><a href="safety.html"><i class="fas fa-chevron-right"></i> Safety</a></li>
+                    <li><a href="explore.html"><i class="fas fa-chevron-right"></i> Explore</a></li>
+                    <li><a href="discover.html"><i class="fas fa-chevron-right"></i> Discover</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@example.com</p>
+                <p><i class="fas fa-clock"></i> Mon - Fri: 9AM - 6PM</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="color: var(--c-14); margin-bottom: 15px;">Subscribe to our newsletter for updates.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email" class="newsletter-input">
+                    <button class="newsletter-btn" aria-label="Subscribe to newsletter">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Modern Website. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+
+</html>
